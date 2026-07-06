@@ -1,0 +1,18 @@
+name = "sensor-monitor"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Secret (JANGAN ditulis di file ini) — set via terminal:
+#   wrangler secret put SUPABASE_URL
+#   wrangler secret put SUPABASE_SERVICE_KEY
+#   wrangler secret put DEVICE_API_KEY
+
+# R2 bucket untuk arsip CSV harian.
+# Buat dulu: wrangler r2 bucket create sensor-archive
+[[r2_buckets]]
+binding = "ARCHIVE"
+bucket_name = "sensor-archive"
+
+# Cron: tiap 10 menit -> flush data baru ke CSV + purge >2 hari.
+[triggers]
+crons = ["*/10 * * * *"]
