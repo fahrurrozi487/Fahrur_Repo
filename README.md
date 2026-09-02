@@ -216,3 +216,6 @@ Kekurangan opsi ini:
 - **Notifikasi Telegram**: kirim foto hasil deteksi ke bot Telegram (butuh internet ke API Telegram — ESP32 bisa langsung pakai HTTPS ke `api.telegram.org`).
 - Ganti foto ke **video klip** (rekam N frame JPEG berurutan lalu gabung).
 - Pakai ESP32-CAM kedua dan streaming keduanya dari satu halaman web.
+
+
+https://meet.google.com/eas-kkcg-jnr?authuser=0&hl=en
